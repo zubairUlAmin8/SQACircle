@@ -9,6 +9,9 @@ startDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", async (req, res) => {
+  res.send("You SQACircle is running");
+});
 app.use(routes.router);
 
 app.listen(3000, () => {
